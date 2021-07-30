@@ -37,7 +37,7 @@ def add_restaurant(restaurants_file):
             break
             
     ratings_info = open(restaurants_file, 'a')
-    ratings_info.write(f'{rest_name}:{rating}\n')
+    ratings_info.write(f'\n{rest_name}:{rating}')
     ratings_info.close()
 
     print("Restaurant added.")           
