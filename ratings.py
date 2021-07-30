@@ -16,7 +16,16 @@ while True:
     if choice.startswith('Y'):
 
         rest_name = input("Enter the restaurant name: ").title()
-        rating = input("Enter the rating: ")
+
+        while True:
+
+            rating = int(input("Enter a rating between 1 and 5: "))
+            if rating < 1 or rating > 5:
+                print("Invalid.")
+
+            else:
+                break
+
 
         restaurant_ratings[rest_name] = rating
 
